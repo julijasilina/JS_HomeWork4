@@ -8,5 +8,5 @@ try {
 } catch (PDOException $e) {
     //we would deal with broken connection here
     echo "Connection failed: " . $e->getMessage();
-    die("No Database!");
+    // die("No Database!");
 }

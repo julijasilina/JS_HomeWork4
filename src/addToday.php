@@ -1,16 +1,13 @@
-<div class="today">
 <form action="processAddToday.php" method="post">
         <h1>Today</h1>
-            <br>
+        <input name="tasks" placeholder="add task">
+            <input type="time" name="tasks_ends">
+            <input type="checkbox" name="Is_finished">
             <button type="submit">Add New Task</button>
             <button type="submit">Done</button>
             <button type="submit">In Progress</button>
             <button type="submit">Delete</button>
-            <br>
 
-            <input name="tasks" placeholder="add task">
-            <input type="time" name="tasks_ends" id="" min="1" max="10000">
-            </div>
 
     <!-- <div class="week">
         <h2>Next 7 days</h2>

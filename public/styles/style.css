@@ -1,14 +1,14 @@
-.today {
+/* .today {
     margin-left: 170px;
     padding: 0px 10px;
     border-radius: 20px;
     /* padding: 0.5em;
     margin: 1em auto 2em; */
-    -moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+    /* -moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
     -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
-    box-shadow:         inset 0 0 10px hsl(67, 19%, 18%);
+    box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); */
     
-}
+/* }  */
 
 .week {
     margin-left: 170px;

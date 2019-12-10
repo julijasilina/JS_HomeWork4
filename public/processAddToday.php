@@ -22,3 +22,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "That was not a POST, most likely GET";
 }
 var_dump($_POST);
+
+// $tasks = $_POST['tasks'];

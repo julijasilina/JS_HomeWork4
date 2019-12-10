@@ -1,5 +1,6 @@
 
-<div class="sidenav">
+<!-- <div class="sidenav"> -->
+
 <!-- <form action="today.php" method="get"> -->
   <!-- <ul>
     <li name="today" value="add">Today</li>
@@ -10,8 +11,8 @@
   </ul> 
 </form>-->
 
-<form action="today.php" method="get">
-  <a href="C:\Users\Julija Silina\Documents\CodingSchool\GitHub\JS_HomeWork4\src\today.php " name="today" value="add">Today</a>
+<!-- <form action="today.php" method="get">
+  <a href="?format=today" name="today" value="add">Today</a>
   <a href="#">Next 7 days</a>
   <a href="#">Complited</a>
   <a href="#">In Progress</a>
@@ -19,4 +20,4 @@
   <a href="#">Birthdays</a>
   </form>  
 </div>
- 
+  -->
