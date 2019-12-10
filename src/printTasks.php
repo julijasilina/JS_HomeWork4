@@ -9,7 +9,6 @@ $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
 
 $columnsPrinted = false; 
-// var_dump($allRows);
 foreach ($allRows as $row) {
     if (!$columnsPrinted) {
         echo "<div class='row-column-names'>";
@@ -40,17 +39,19 @@ foreach ($allRows as $row) {
             }
         }
         echo "<button name='update' value='" . $row['Id'] . "'>Update</button>";
+        echo "</form>";
         echo "<form action='deleteTask.php' method='post'>";
         echo "<button name='delete' value='" . $row['Id'] . "'>Delete</button>";
         echo "</form>"; 
+        
     }
     
     
     // echo "</div>";
-    echo "</form>";
-    // echo "<form action='deleteTasks.php' method='post'>";
-    // echo "<button name='delete' value='" . $row['id'] . "'>Delete</button>";
-//     echo "</form>";
+    // echo "</form>";
+    // echo "<form action='deleteTask.php' method='post'>";
+    // echo "<button name='delete' value='" . $row['Id'] . "'>Delete</button>";
+    // echo "</form>";
 //     echo "</div>";
 
 // echo "</div>";
