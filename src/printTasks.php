@@ -21,7 +21,7 @@ foreach ($allRows as $row) {
         echo "</div>";
 
         echo "<div class='row-tasks'>";
-        // echo "<form action='updateTasks.php' method='post'>";
+        echo "<form action='updateTask.php' method='post'>";
         // echo "<div class='update-tasks'>";
         echo "<span>Tasks: " . $row["tasks"] . "</span>";
     echo "</div>";
@@ -39,17 +39,15 @@ foreach ($allRows as $row) {
                     break;
             }
         }
-
-
-
-
+        echo "<button name='update' value='" . $row['Id'] . "'>Update</button>";
+        echo "<form action='deleteTask.php' method='post'>";
+        echo "<button name='delete' value='" . $row['Id'] . "'>Delete</button>";
+        echo "</form>"; 
     }
-
-
     
-    // echo "<button name='update' value='" . $row['id'] . "'>Update</button>";
+    
     // echo "</div>";
-    // echo "</form>";
+    echo "</form>";
     // echo "<form action='deleteTasks.php' method='post'>";
     // echo "<button name='delete' value='" . $row['id'] . "'>Delete</button>";
 //     echo "</form>";

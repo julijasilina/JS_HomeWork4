@@ -1,12 +1,12 @@
-<form action="processAddToday.php" method="post">
+<form action="processAddTask.php" method="post">
         <h1>Today</h1>
         <input name="tasks" placeholder="add task">
             <input type="time" name="tasks_ends">
             <input type="checkbox" name="Is_finished">
             <button type="submit">Add New Task</button>
-            <button type="submit">Done</button>
+            <!-- <button type="submit">Done</button>
             <button type="submit">In Progress</button>
-            <button type="submit">Delete</button>
+            <button type="submit">Delete</button> -->
 
 
     <!-- <div class="week">
