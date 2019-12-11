@@ -1,11 +1,12 @@
 <?php
+session_start();
 require_once '../src/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tasks = $_POST['tasks'];
     $tasks_ends = $_POST['tasks_ends']; 
     $Is_finished = $_POST['Is_finished'];
-    $users_id = 1; //TODO add real users
+    $users_id = $_SESSION['id'];
 
 
     $stmt = $conn->prepare("INSERT INTO todo_list (tasks, tasks_ends, Is_finished, users_id)

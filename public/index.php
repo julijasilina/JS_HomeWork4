@@ -3,6 +3,7 @@ require_once '../config/config.php';
 
 require_once '../src/templates/head.php';
 
+require_once '../src/login.php';
 // require_once '../src/sideNav.php';
 
 // require_once '../src/today.php';

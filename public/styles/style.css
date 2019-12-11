@@ -10,6 +10,16 @@
     
 /* }  */
 
+.row-column-names {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row-tasks {
+  display: flex;
+  justify-content: space-around;
+}
+
 .week {
     margin-left: 170px;
     padding: 0px 10px;

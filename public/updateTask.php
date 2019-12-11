@@ -16,7 +16,7 @@ require_once '../src/db.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $tasks_Id = $_POST['update'];
+    $tasks_id = $_POST['update'];
     $tasks = $_POST['tasks'];
     $tasks_ends = $_POST['tasks_ends'];
     $Is_finished = $_POST['Is_finished'];
@@ -31,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             `tasks_ends` = (:tasks_ends),
             `Is_finished` = (:Is_finished)
             -- `favorite` = (:favorite)
-        WHERE `todo_list`.`Id` = (:tasks_Id)");
+        WHERE `todo_list`.`id` = (:tasks_id)");
 
-    $stmt->bindParam(':tasks_Id', $tasks_Id);
+    $stmt->bindParam(':tasks_id', $tasks_id);
     $stmt->bindParam(':tasks', $tasks);
     $stmt->bindParam(':tasks_ends', $tasks_ends);
     $stmt->bindParam(':Is_finished', $Is_finished);
