@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo TODOLISTJS; ?></title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/vendor/bootstrap.css">
+    <!-- <script src="scripts/main.js" defer></script> -->
 </head>
 <body>
     

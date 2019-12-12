@@ -2,7 +2,8 @@
 require_once 'db.php';
 
 if (!isset($_SESSION['username'])) {
-    echo "Please Login to see your songs";
+    // echo "Please Login to see your tasks";
+    echo "<div class='register-p'>Create account <a href='register.php'><button> Next </button></a>";
     return;
 } else {
     echo "Welcome " . $_SESSION['username'] . "!<br>";
@@ -21,17 +22,17 @@ $columnsPrinted = false;
 foreach ($allRows as $row) {
     //jāizdzēš, ja neies
 
-    // {     switch ($row) {
-    //         case 'tasks':
-    //         case 'tasks_ends':
-    //         case 'Is_finished':
-    //             echo "<input class='input-value-cell value-$row' name='$row' value='$value'></input>";
-    //             break;
-    //         default:
-    //             // echo "<span class='value-cell'>$value </span>"; //lai nerādas visi row
-    //             // break;
-    //     }
-    // }
+        //  switch ($row) {
+        //     case 'tasks':
+        //     case 'tasks_ends':
+        //     case 'Is_finished':
+        //         echo "<input class='input-value-cell value-$row' name='$row' value='$value'></input>";
+        //         break;
+        //     default:
+        //         // echo "<span class='value-cell'>$value </span>"; //lai nerādas visi row
+        //         // break;
+        // }
+    
     
     if (!$columnsPrinted) {
         echo "<div class='row-column-names'>";
@@ -48,6 +49,7 @@ foreach ($allRows as $row) {
         }
 
             echo "<span class='column-name'> $key </span>";
+            //te b'us j'apapildina ar switch
         }
         $columnsPrinted = true;
     }

@@ -1,5 +1,7 @@
 <?php
-require_once '../config/config.php';
+session_start();
+
+// require_once '../config/config.php';
 
 require_once '../src/templates/head.php';
 

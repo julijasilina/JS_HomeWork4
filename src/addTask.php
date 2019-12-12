@@ -1,7 +1,13 @@
+<?php
+if (!$_SESSION['username']) {
+    return;
+}
+?>
+
 <form action="processAddTask.php" method="post">
         <h1>Today</h1>
         <input name="tasks" placeholder="add task">
-            <input type="time" name="tasks_ends">
+            <input type="date" name="tasks_ends">
             <input type="checkbox" name="Is_finished">
             <button type="submit">Add New Task</button>
             <!-- <button type="submit">Done</button>

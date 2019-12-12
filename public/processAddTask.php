@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!$_SESSION['id']) {
+    header('Location: /');
+    return; //We do not add tasks for unregistered users
+}
 require_once '../src/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
