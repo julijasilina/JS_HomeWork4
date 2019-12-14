@@ -1,27 +1,27 @@
 <?php
-//we need to start sesssion to check if user already exists
-// session_start();
 if (isset($_SESSION['username'])) {
-    echo "You are logged in " . $_SESSION['username'];
-    // echo "<form action='processLogout.php' method='post'>";
-    // echo "<button>Logout</button>";
-    // echo "</form>";
-    ?>
-    <form action="processLogout.php" method="post">
-        <button>Logout</button>
-    </form>
-<?php
-
-} else {
-    
-    echo "<span class='logo'>JS </span>" ;
-    echo "<div class='sign-in'>Sign in </div>" ;
-    echo "<span class='sign-in'>to see your tasks </span>" ;
-    echo "<form class='login-f' action='processLogin.php' method='post'>";
-    echo "<input name='username'placeholder='Enter username' required>";
-    echo "<input name='password' type='password' placeholder='Enter password' required>";
-    echo "<button>Sign in</button>";
-    echo "</form>";
+    // echo "You are logged in " . $_SESSION['username'];
+    echo "<div class='logout-h'>";
+         echo "<form class='logout-b' action='processLogout.php' method='post'>";
+                echo "<button class='btn btn-secondary' >Logout</button>";
+         echo "</form>";
     echo "</div>";
+} 
+else {
+    echo "<div class='main-login-f'>";
+    echo "<form class='login-f' action='processLogin.php' method='post'>";
+    echo "<span class='logo'>J<span class='green'>S</span> t<span class='green'>o</span> d<span class='green'>o</span> l<span class='green'>i</span>s<span class='green'>t</span></span>" ;
+    echo "<div class='sign-in'>Sign in </div>" ;
+    echo "<div> to see your tasks </div>" ;
+    // echo "<label for='exampleInputEmail1'>Email address</label>";
+    echo "<br><input name='username' type='email' class='form-control' placeholder='Enter username' required></br>";
+    echo "<br><input name='password' type='password' class='form-control' placeholder='Enter password' required></br>";
+    echo "<br><button class='btn btn-secondary'>Sign in</button></br>";
+    echo "</form>";
+    echo "<div class='register-p'>or <a href='register.php'>create account</a></div>";
+    // echo "<div class='register-p'>Create account <a href='register.php'><button type='button' class='btn btn-secondary'> Next </button></a></div>";
+    echo "</div>";
+    return;
+
 }
-echo "<hr>";
+// echo "<hr>";

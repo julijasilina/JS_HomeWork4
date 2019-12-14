@@ -1,15 +1,14 @@
 <?php
-if (!$_SESSION['username']) {
+if (!isset($_SESSION['username'])) {
     return;
 }
 ?>
 
-<form action="processAddTask.php" method="post">
-        <h1>Today</h1>
-        <input name="tasks" placeholder="add task">
-            <input type="date" name="tasks_ends">
-            <input type="checkbox" name="Is_finished">
+<form class="add-task" action="processAddTask.php" method="post">
+        <input name="tasks" placeholder="add task" required>
+        <input type="date" name="tasks_ends">
             <button type="submit">Add New Task</button>
+        <hr>
             <!-- <button type="submit">Done</button>
             <button type="submit">In Progress</button>
             <button type="submit">Delete</button> -->

@@ -1,16 +1,163 @@
-/* .today {
-    margin-left: 170px;
-    padding: 0px 10px;
-    border-radius: 20px;
-    /* padding: 0.5em;
-    margin: 1em auto 2em; */
-    /* -moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
-    -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
-    box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); */
-    
-/* }  */
 
-.row-column-names {
+.header {
+  display: grid;
+  width: 100%;
+  /* padding: 10px;
+  text-align: center; */
+  /* color: white; */
+
+}
+
+.logout-h{
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  background: rgb(228, 165, 106);
+  font-size: 30px;
+}
+
+.logout-b {
+  /* grid-column: 3; */
+  display: flex;
+    margin: 0 0 0 auto;
+}
+
+/* #search {
+  width: 40em;
+  grid-template-columns: 2;
+} */
+
+
+.add-task {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  font-size: 15px;
+  margin-left:auto;
+  padding: 0px 10px;
+  border-radius: 20px;
+/* padding: 0.5em;
+  margin: 1em auto 2em; */
+-moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+  -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
+  box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); 
+}
+
+/* .main-task-cont {
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2em 4em 2em;
+  grid-template-rows: repeat(3, 8em);
+  font-size: 15px;
+  padding: 0px 10px;
+  border-radius: 20px;
+-moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+  -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
+  box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); 
+} */
+.main-task-cont {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 15px;
+  padding: 0px 10px;
+  border-radius: 20px;
+-moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+  -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
+  box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); 
+}
+
+.update-task {
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* flex-direction: column-reverse;
+flex-wrap: wrap; */
+  font-size: 15px;
+  padding: 0px 10px;
+  border-radius: 20px;
+-moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+  -webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
+  box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); 
+
+}
+
+.main-login-f {
+  font-size: 15px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 0.25fr);
+  /* grid-template-rows: 100px 200px 100px; */
+}
+
+.login-f {
+grid-column: 2;
+grid-row: 2;
+text-align: center;
+box-sizing: border-box;
+border-radius: 20px;
+/* margin: auto; */
+width: 100%;
+padding: 20px;
+-moz-box-shadow:    inset 0 0 10px hsl(67, 19%, 18%);
+-webkit-box-shadow: inset 0 0 10px hsl(67, 19%, 18%);
+box-shadow:         inset 0 0 10px hsl(67, 19%, 18%); 
+ }
+
+ .register-p {
+  grid-column: 2;
+  grid-row: 3;
+  text-align: center;
+  box-sizing: border-box;
+  /* margin:  10px 500px 90px 550px ; */
+  width: 100%;
+  padding: 20px;
+ }
+
+ .logo {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(71, 35, 129);
+ }
+
+.sign-in {
+  font-size: 30px;
+ }
+
+ span.green{
+color: rgb(103, 104, 45);
+ }
+
+ .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #333;
+  font-size: 13px;
+  text-align: center;
+  /* vertical-align: bottom; */
+  /* margin-bottom: 2em; */
+}
+
+.footer:before {
+  clear: both;
+  display: block;
+  height: 120px;
+  min-height: 120px;
+}
+
+/* .row-column-names {
   display: flex;
   justify-content: space-around;
 }
@@ -19,6 +166,11 @@
   display: flex;
   justify-content: space-around;
 }
+ */
+/* .input-value-cell {
+  display: flex;
+  justify-content: space-around;
+} */
 
 /* .week {
     margin-left: 170px;
@@ -100,18 +252,6 @@
   color: #f1f1f1;
 }
 
-span.logo {
-  font-size: 50px;
-}
-
-.sing-in {
- font-size: 70px;
- color: saddlebrown;
-}
-
-span.sign-in {
-font-size: 25px;;
-}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

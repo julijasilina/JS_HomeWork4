@@ -1,20 +1,6 @@
 <?php
 require_once '../src/db.php';
 
-
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     $tasks_Id = $_POST['update'];
-
-//         die("Got tasks_id $tasks_Id");
-
-//     $stmt = $conn->prepare("DELETE FROM `todo_list` WHERE `todo_list`.`Id` = (:tasksid)");
-//     $stmt->bindParam(':tasksid', $tasks_Id);
-//     $stmt->execute();
-//     header('Location: /');
-// }
-
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tasks_id = $_POST['update'];
     $tasks = $_POST['tasks'];
@@ -22,9 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Is_finished = $_POST['Is_finished'];
     // for check boxes we only get the value when checkbox is checked!
     // $isFavorite = isset($_POST['favorite']);
-
-    var_dump($_POST);
-    // die("with my favorite $isfavorite");
 
     $stmt = $conn->prepare("UPDATE `todo_list`
         SET `tasks` = (:tasks),
@@ -40,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // $stmt->bindParam(':favorite', $isFavorite);
 
     $stmt->execute();
-    //we go to our index.php or rather our root
     header('Location: /');
 } else {
     echo "That was not a POST, most likely GET";
