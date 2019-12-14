@@ -24,11 +24,10 @@ foreach ($allRows as $row) {
             switch ($key) 
             {
                 case 'tasks':
-                    
-                    echo "<span> Task </span>";
+                    // echo "<span> Task </span>";
                 break;
                 case 'tasks_ends':
-                    echo "<span> Date </span>";
+                    // echo "<span> Date </span>";
                 break;
                 // case 'Is_finished':
                 //     echo "<span class='column-name'> Done </span>";
@@ -59,19 +58,19 @@ foreach ($allRows as $row) {
                 case 'tasks':
                 case 'tasks_ends':
                 // case 'Is_finished':
-                    echo "<input value-'$key' name='$key' value='$value'></input>";
+                    echo "<input value-'$key' class='form-control' name='$key' value='$value'></input>";
                     break;
                 default:
             }
             
         }
         
-        echo "<button name='update' value='" . $row['id'] . "'>Update</button>";
+        echo "<button name='update' class='btn btn-outline-secondary' value='" . $row['id'] . "'>Update</button>";
         // echo "</div>";
         echo "</form>";
         echo "<form action='deleteTask.php' method='post'>";
         echo "<div class='delete-task'>";
-        echo "<button name='delete' value='" . $row['id'] . "'>Delete</button>";
+        echo "<button name='delete' class='btn btn-outline-secondary' value='" . $row['id'] . "'>Delete</button>";
         echo "</div>";
         echo "</form>"; 
         echo "</div>";

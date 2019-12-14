@@ -23,9 +23,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     header('Location: /');
 
-} else {
-    echo "That was not a POST, most likely GET";
-}
-var_dump($_POST);
-
-// $tasks = $_POST['tasks'];
+} 
