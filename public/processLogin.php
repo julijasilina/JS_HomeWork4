@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../src/dbutils.php';
+require_once '../src/printTasks.php';
 $conn = getConn($SERVER, $DB, USER, PW);
 
 // require_once '../src/db.php';

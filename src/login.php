@@ -2,9 +2,11 @@
 if (isset($_SESSION['username'])) {
     // echo "You are logged in " . $_SESSION['username'];
     echo "<div class='modal-header'>";
-         echo "<form class='logout-b' action='processLogout.php' method='post'>";
-                echo "<button class='btn btn-secondary' >Logout</button>";
-         echo "</form>";
+        echo "<form class='logout-b' action='processLogout.php' method='post'>";
+            echo "<button class='btn btn-secondary' >Logout</button>";
+        echo "</form>";
+        echo "<a href='?format=printTasks' name='printTask' class='btn btn-secondary' >Back</a>";
+        echo"</form>";
     echo "</div>";
 } 
 else {

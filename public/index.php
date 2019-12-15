@@ -17,5 +17,4 @@ require_once '../src/addTask.php';
 
 require_once '../src/db.php';
 
-
 require_once '../src/templates/foot.php';

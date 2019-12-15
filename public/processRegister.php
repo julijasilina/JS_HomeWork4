@@ -8,13 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (strlen($_POST['password']) < 2) {
         header('Location: /?error=shortpassword');
         exit();
-        // echo "Password too short";
-        // die("Too short!");
-        // header('Location: /');
+
     }
     if ($_POST['password'] != $_POST['password2']) {
-        // echo "Password mismatch";
-        // ader('Location: /');
+
         header('Location: /?error=mismatch');
         exit();
     }
@@ -28,16 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $stmt->execute();
     } catch (PDOException $error) {
-        // var_dump($error);
-        if ($error->errorInfo[1] == 1062) { //1062 -  duplicate entry error code
+        if ($error->errorInfo[1] == 1062) { /
             header('Location: /?error=userexists');
             exit();
         } else {
-            throw $error; //this will pass other error back up the normal control chain
+            throw $error; 
         }
     }
     
-    // $stmt->execute();
 
     checkLogin($conn, $username, $_POST['password']);
 }
