@@ -9,7 +9,7 @@ require_once '../src/login.php';
 
 require_once '../src/sideNav.php';
 
-require_once '../src/addTask.php';
+// require_once '../src/addTask.php';
 
 // require_once '../src/printTasks.php';
 

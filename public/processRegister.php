@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $stmt->execute();
     } catch (PDOException $error) {
-        if ($error->errorInfo[1] == 1062) { /
+        if ($error->errorInfo[1] == 1062) { 
             header('Location: /?error=userexists');
             exit();
         } else {

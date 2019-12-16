@@ -10,13 +10,15 @@ $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
 $allRows = $stmt->fetchAll();
 
+
 echo "<div class='main-cont'>";
-echo "<div class='main-task-cont'>";
 // echo "<div class='input-group-text'>";
 $columnsPrinted = false; 
 foreach ($allRows as $row) {
+
     if (!$columnsPrinted) 
     {
+
         // echo "<div class='task-list'>";
         foreach ($row as $key => $value) 
         {    
@@ -37,6 +39,7 @@ foreach ($allRows as $row) {
             }
         }
         $columnsPrinted = true;
+
         echo "</div>";
 
                     
@@ -78,3 +81,4 @@ foreach ($allRows as $row) {
     }
     echo "</div>";
     
+    require_once 'addTask.php';

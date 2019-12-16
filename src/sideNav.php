@@ -4,19 +4,23 @@ if (!isset($_SESSION['username'])) {
 }
 require_once '../src/db.php';
 
-if (!isset($_GET['format'])) 
+if (isset($_GET['format'])) 
 {
     // echo $_GET['format'];
-    require_once '../src/printTasks.php';
+    require_once '../src/addTask.php';
     // var_dump($_GET);
 } 
-elseif (isset($_GET['week'])) 
+elseif (isset($_GET['format2'])) 
 {
-    require_once '../src/week.php';
+    require_once '../src/search.php';
+} 
+elseif (isset($_GET['format3'])) 
+{
+    require_once '../src/printTasks.php';
 } 
 else
 {
-  require_once '../src/addTask.php';
+  require_once '../src/printTasks.php';
 }
 
 ?>
@@ -37,9 +41,12 @@ else
  <form action="addTask.php" method="get">
   <a href="?format=addTask" name="addTask" value="add">Add tasks</a>
   </form> 
-  <!-- <form action="week.php" method="get"> -->
-  <a href="week.php" name="week">Week</a>
-<!-- </form> -->
+  <form action="search.php" method="get">
+  <a href="?format2=search.php" name="search">Search</a>
+</form>
+  <form action="printTasks.php" method="get">
+  <a href="?format3=printTasks" name="list">Task list</a>
+</form>
    
 </div>
  

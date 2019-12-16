@@ -3,8 +3,8 @@ require_once '../src/templates/head.php';
 ?>
     <div class="register">
         
-        <div class="main-login-f login-f sign-in">
-        <span class="h1">Registration Form</span>
+        <div class=" login-f sign-in">
+        <span class="task">Registration Form</span>
         <form action="processRegister.php" method="post">
         <br>    
         <input type="text" name="username" class='form-control' placeholder="Choose Username" required>
